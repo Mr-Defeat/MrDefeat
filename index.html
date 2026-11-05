@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MrDefeat_</title>
+<script>try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<meta name="theme-color" content="#5cc3e8">
+<!-- Podgląd po wklejeniu linku (Discord, Messenger itp.).
+     Adres w og:image to https://mr-defeat.github.io/og-image.png. Jeśli strona będzie pod innym adresem, zmień go tutaj
+     i wgraj obok index.html plik og-image.png. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="MrDefeat_">
+<meta property="og:description" content="Administrator of the Pixalis.pl Minecraft server.">
+<meta property="og:image" content="https://mr-defeat.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MrDefeat_ - Administrator of the Pixalis.pl server">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="MrDefeat_ – administrator serwera Minecraft. / Minecraft server administrator.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2016%2016%22%20shape-rendering=%22crispEdges%22%3E%3Crect%20width=%2216%22%20height=%2216%22%20fill=%22%231c5a49%22/%3E%3Crect%20x=%223%22%20y=%221%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%2211%22%20y=%221%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%223%22%20y=%223%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%225%22%20y=%223%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%229%22%20y=%223%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%2211%22%20y=%223%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%223%22%20y=%225%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%227%22%20y=%225%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%2211%22%20y=%225%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%223%22%20y=%227%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%227%22%20y=%227%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%2211%22%20y=%227%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%223%22%20y=%229%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%2211%22%20y=%229%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%223%22%20y=%2211%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%2211%22%20y=%2211%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%223%22%20y=%2213%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3Crect%20x=%2211%22%20y=%2213%22%20width=%222%22%20height=%222%22%20fill=%22%239ad9a8%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sky-top: #c9ecfa;
+  --sky-mid: #e6f8f3;
+  --sky-low: #f5fcf6;
+  --ink: #12352f;
+  --ink-soft: #3d5f58;
+  --leaf: #3fa66b;
+  --leaf-dark: #1c5a49;
+  --leaf-link: #1b7a4b;
+  --mint: #9ad9a8;
+  --air: #5cc3e8;
+  --paper: #fbfffd;
+  --btn-text: #fff;
+  --grass-hi: #9ad9a8;
+  --nav-hover: rgba(255,255,255,.7);
+  color-scheme: light;
+  --online: #1f9d55;
+  --idle: #d99a0b;
+  --dnd: #d83b3b;
+  --offline: #7b8a87;
+  --pixel: "Pixelify Sans", "Press Start 2P", ui-monospace, monospace;
+  --text: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: auto; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--text);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 45%, var(--sky-low) 100%);
+  background-color: var(--sky-mid);
+  overflow-x: hidden;
+}
+a { color: var(--leaf-link); }
+:focus-visible { outline: 3px solid var(--leaf-dark); outline-offset: 3px; }
+
+/* clouds */
+.sky { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+.cloud {
+  position: absolute; left: -300px; width: 240px; height: 72px;
+  background:
+    linear-gradient(#fff,#fff) 48px 0 / 120px 24px no-repeat,
+    linear-gradient(#fff,#fff) 24px 24px / 192px 24px no-repeat,
+    linear-gradient(#fff,#fff) 0 48px / 240px 24px no-repeat;
+  opacity: .75;
+  animation: drift 160s linear infinite;
+}
+.cloud.c2 { top: 28%; transform: scale(.7); opacity: .55; animation-duration: 230s; animation-delay: -90s; }
+.cloud.c3 { top: 62%; transform: scale(1.2); opacity: .4; animation-duration: 300s; animation-delay: -200s; }
+.cloud.c1 { top: 9%; animation-delay: -30s; }
+@keyframes drift { to { translate: calc(100vw + 600px) 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .cloud { animation: none; left: 12%; }
+  .cloud.c2 { left: 62%; }
+  .cloud.c3 { left: 30%; }
+  html { scroll-behavior: auto; }
+}
+
+.wrap { position: relative; z-index: 1; width: min(100% - 32px, 940px); margin-inline: auto; }
+
+/* header */
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; flex-wrap: wrap; }
+nav.menu { display: flex; gap: 6px; flex-wrap: wrap; }
+nav.menu a {
+  font-weight: 600; text-decoration: none; color: var(--ink);
+  padding: 6px 12px; border-radius: 4px;
+}
+nav.menu a:hover { background: var(--nav-hover); }
+.lang { display: inline-flex; border: 3px solid var(--leaf-dark); background: var(--paper); }
+.lang button {
+  font: 600 .95rem var(--text); color: var(--ink);
+  background: transparent; border: 0; padding: 4px 14px; cursor: pointer;
+}
+.lang button[aria-pressed="true"] { background: var(--leaf-dark); color: var(--btn-text); }
+.lang button:not([aria-pressed="true"]):hover { background: var(--sky-top); }
+
+/* hero */
+.hero { display: grid; gap: 40px; padding: 44px 0 72px; align-items: center; }
+@media (min-width: 820px) { .hero { grid-template-columns: 1.15fr 1fr; gap: 56px; padding: 72px 0 96px; } }
+.nick {
+  font-family: var(--pixel); font-weight: 700;
+  font-size: clamp(2.8rem, 9vw, 5.2rem); line-height: 1;
+  margin: 0 0 18px; letter-spacing: -.01em;
+  color: var(--leaf-dark);
+  text-shadow: 4px 4px 0 var(--mint);
+  overflow-wrap: anywhere;
+}
+.role { font-size: 1.35rem; font-weight: 600; margin: 0 0 6px; }
+.lead { margin: 0; color: var(--ink-soft); max-width: 46ch; }
+
+/* discord card */
+.dc {
+  background: var(--paper);
+  border: 3px solid var(--leaf-dark);
+  box-shadow: 8px 8px 0 var(--mint);
+  padding: 20px;
+  display: grid; grid-template-columns: 88px 1fr; gap: 18px; align-items: center;
+}
+.dc-avatar { position: relative; width: 88px; height: 88px; }
+.dc-avatar img, .dc-avatar .ph {
+  width: 88px; height: 88px; display: block; border: 3px solid var(--leaf-dark);
+  background: var(--sky-top); object-fit: cover; image-rendering: auto;
+}
+.dc-avatar .ph { display: grid; place-items: center; font: 700 2.4rem var(--pixel); color: var(--leaf-dark); }
+.dc-dot {
+  position: absolute; right: -8px; bottom: -8px; width: 22px; height: 22px;
+  border: 3px solid var(--paper); background: var(--offline); outline: 3px solid var(--leaf-dark);
+}
+.dc-dot[hidden] { display: none; }
+.dc-dot.online { background: var(--online); }
+.dc-dot.idle { background: var(--idle); }
+.dc-dot.dnd { background: var(--dnd); }
+.dc-name { margin: 0; font: 700 1.5rem/1.2 var(--pixel); overflow-wrap: anywhere; }
+.dc-user { margin: 0 0 4px; color: var(--ink-soft); font-size: .95rem; overflow-wrap: anywhere; }
+.dc-status { margin: 0; font-weight: 600; }
+.dc-act { margin: 8px 0 0; padding-top: 8px; border-top: 2px dashed var(--mint); font-size: .95rem; color: var(--ink-soft); }
+.dc-act:empty { display: none; }
+.dc-act b { color: var(--ink); font-weight: 600; }
+
+/* sections */
+section.block { display: grid; gap: 14px 40px; padding: 40px 0; scroll-margin-top: 12px; }
+@media (min-width: 820px) { section.block { grid-template-columns: 190px 1fr; } }
+section.block h2 { margin: 0; font: 700 1.75rem/1.2 var(--pixel); color: var(--leaf-dark); }
+section.block p { margin: 0 0 1em; max-width: 62ch; }
+section.block p:last-child { margin-bottom: 0; }
+
+dl.specs { margin: 0; border: 3px solid var(--leaf-dark); background: var(--paper); box-shadow: 6px 6px 0 var(--mint); max-width: 560px; }
+dl.specs div { display: grid; grid-template-columns: 1fr; gap: 0; padding: 14px 18px; }
+dl.specs div + div { border-top: 3px solid var(--leaf-dark); }
+@media (min-width: 520px) { dl.specs div { grid-template-columns: 170px 1fr; align-items: baseline; } }
+dl.specs dt { color: var(--ink-soft); font-weight: 500; display: flex; align-items: center; gap: 10px; }
+dl.specs .ic { width: 26px; height: 26px; flex: none; color: var(--leaf); }
+:root[data-theme="dark"] dl.specs .ic { color: var(--leaf-dark); }
+dl.specs dd { margin: 0; font: 700 1.35rem/1.3 var(--pixel); }
+
+.btn {
+  font: 600 1.05rem var(--text); color: var(--btn-text); background: var(--leaf-dark);
+  border: 3px solid var(--leaf-dark); padding: 10px 20px; cursor: pointer;
+  box-shadow: 5px 5px 0 var(--mint);
+  transition: transform .08s, box-shadow .08s;
+}
+.btn:hover { background: var(--leaf); border-color: var(--leaf-dark); }
+.btn:active { transform: translate(4px, 4px); box-shadow: 1px 1px 0 var(--mint); }
+.contact-row { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 18px; }
+.mail { margin-top: 18px !important; overflow-wrap: anywhere; }
+.mail a { font-weight: 600; }
+.handle { font: 700 1.3rem var(--pixel); overflow-wrap: anywhere; }
+
+/* now + server */
+@media (min-width: 820px) { section.block.wide { grid-template-columns: 1fr; } }
+section.block.wide { gap: 24px; }
+.sub { color: var(--ink-soft); margin-top: 6px !important; }
+.cards { display: grid; gap: 22px; grid-template-columns: 1fr; }
+@media (min-width: 700px) { .cards { grid-template-columns: 1fr 1fr; } }
+.card { display: flex; flex-direction: column; gap: 14px; padding: 20px; background: var(--paper); border: 3px solid var(--leaf-dark); box-shadow: 6px 6px 0 var(--mint); }
+.card p { margin: 0 !important; color: var(--ink-soft); font-size: 1rem; }
+.card-head { display: flex; align-items: center; gap: 12px; }
+.card h3 { margin: 0; font: 700 1.2rem/1.25 var(--pixel); overflow-wrap: anywhere; }
+.icon { flex: none; width: 38px; height: 38px; display: grid; place-items: center; background: var(--sky-top); border: 3px solid var(--leaf-dark); font: 700 1.1rem var(--pixel); color: var(--leaf-dark); }
+.tags { list-style: none; margin: auto 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tags li { padding: 3px 10px; border: 2px solid var(--leaf-dark); background: var(--sky-low); font-size: .9rem; font-weight: 600; }
+a.card { color: inherit; text-decoration: none; transition: transform .08s, box-shadow .08s; }
+a.card:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--mint); }
+a.card:active { transform: translate(4px, 4px); box-shadow: 2px 2px 0 var(--mint); }
+.card .more { margin-top: 4px; font-weight: 600; color: var(--leaf-link); text-decoration: underline; text-underline-offset: 3px; }
+a.card:hover .more { text-decoration-thickness: 3px; }
+@media (min-width: 700px) { .card.featured { grid-column: 1 / -1; } }
+.card.soon { background: transparent; border-style: dashed; box-shadow: none; }
+.card.soon .soon-label { margin-top: auto !important; padding-top: 12px; border-top: 2px dashed var(--mint); }
+.btn.small { font-size: .95rem; padding: 6px 14px; box-shadow: 4px 4px 0 var(--mint); }
+
+.progress { position: fixed; top: 0; left: 0; height: 5px; width: 100%; z-index: 100; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--leaf), #5cc3e8); box-shadow: 0 2px 0 rgba(18,53,47,.25); pointer-events: none; }
+.avail { margin-top: 22px; padding: 16px 18px; background: var(--paper); border: 3px solid var(--leaf-dark); box-shadow: 6px 6px 0 var(--mint); max-width: 48ch; }
+.avail h3 { margin: 0 0 8px; font: 700 1.1rem/1.25 var(--pixel); }
+.avail p { margin: 4px 0 !important; }
+.avail .avail-note { color: var(--ink-soft); margin-top: 10px !important; }
+.avail .avail-now { display: flex; align-items: center; gap: 10px; margin-top: 12px !important; padding-top: 12px; border-top: 2px dashed var(--mint); font-weight: 600; }
+.avail .dc-dot { position: static; flex: none; outline: 3px solid var(--leaf-dark); border-color: var(--paper); }
+button.secret { background: none; border: 0; padding: 0; margin: 0; font: inherit; color: inherit; font-family: "Noto Sans JP", system-ui, sans-serif; }
+button.secret:hover, button.secret:focus-visible { text-decoration: underline dotted; text-underline-offset: 4px; }
+.secret-toast { position: fixed; left: 50%; bottom: 96px; transform: translateX(-50%); z-index: 120; padding: 10px 18px; background: var(--paper); color: var(--ink); border: 3px solid var(--leaf-dark); box-shadow: 5px 5px 0 var(--mint); font: 700 1rem var(--pixel); font-family: "Noto Sans JP", var(--pixel); }
+.secret-toast[hidden] { display: none; }
+@media (prefers-reduced-motion: reduce) { .progress { transition: none; } }
+
+html.rv .block, html.rv .hero { opacity: 0; transform: translateY(34px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+html.rv .block.in, html.rv .hero.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { html.rv .block, html.rv .hero { opacity: 1; transform: none; transition: none; } }
+@media (max-width: 560px) {
+  .avail { max-width: none; box-shadow: 4px 4px 0 var(--mint); }
+  .secret-toast { bottom: 84px; max-width: calc(100vw - 32px); text-align: center; }
+  footer.ground .wrap { justify-content: center; text-align: center; }
+}
+
+.msgform { margin-top: 22px; padding: 16px 18px; background: var(--paper); border: 3px solid var(--leaf-dark); box-shadow: 6px 6px 0 var(--mint); max-width: 48ch; display: grid; gap: 12px; }
+.msgform[hidden] { display: none; }
+.msgform h3 { margin: 0; font: 700 1.1rem/1.25 var(--pixel); }
+.msgform p { margin: 0 !important; }
+.msgform label { display: grid; gap: 4px; font-weight: 500; color: var(--ink-soft); }
+.msgform input[type=text], .msgform input[type=email], .msgform textarea { width: 100%; font: inherit; color: var(--ink); background: var(--sky-top); border: 3px solid var(--leaf-dark); padding: 8px 10px; border-radius: 0; resize: vertical; }
+.msgform input:focus-visible, .msgform textarea:focus-visible { outline: 3px solid #5cc3e8; outline-offset: 1px; }
+.msgform .form-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.msgform .btn[disabled] { opacity: .6; }
+
+html.calm *, html.calm *::before, html.calm *::after { animation: none !important; transition: none !important; }
+html.calm .block, html.calm .hero { opacity: 1 !important; transform: none !important; }
+button.calmbtn { background: none; border: 2px solid rgba(255,255,255,.7); color: inherit; font: inherit; font-weight: 500; padding: 2px 10px; }
+button.calmbtn:hover, button.calmbtn:focus-visible { background: rgba(255,255,255,.18); }
+.skin3d { height: 200px; display: grid; place-items: center; perspective: 800px; overflow: hidden; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; }
+.skin3d[hidden] { display: none; }
+.skin3d:active { cursor: grabbing; }
+.sk { position: relative; width: 0; height: 0; transform-style: preserve-3d; }
+.sk .part { position: absolute; left: 0; top: 0; transform-style: preserve-3d; }
+.sk .face { position: absolute; left: 50%; top: 50%; background-repeat: no-repeat; image-rendering: pixelated; backface-visibility: hidden; }
+.joinrow { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+.joinrow[hidden] { display: none; }
+.joinrow code { font: 700 1.1rem var(--pixel); overflow-wrap: anywhere; }
+
+.fl, .fr { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+@media (max-width: 560px) { .fl, .fr { justify-content: center; } }
+.privacy-wrap { justify-content: center !important; padding-bottom: 14px; }
+.privacy { margin: 0 !important; font-size: .88rem; text-align: center; max-width: 70ch; opacity: .92; }
+
+/* theme + typing + stars */
+:root[data-theme="dark"] {
+  --sky-top: #07162a; --sky-mid: #0c2a36; --sky-low: #0e3a34;
+  --ink: #e4f4ee; --ink-soft: #a5c6bb;
+  --leaf: #1d6b49; --leaf-dark: #8fe0a6; --leaf-link: #8fe0a6;
+  --mint: #215e47; --paper: #0f2e2a;
+  --btn-text: #0a2a21; --grass-hi: #3fa66b; --nav-hover: rgba(255,255,255,.09);
+  --online: #3ddc84; --idle: #f0b232; --dnd: #ff6b6b; --offline: #8aa39c;
+  color-scheme: dark;
+}
+.tools { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.themebtn {
+  font: 600 .95rem var(--text); color: var(--ink); background: var(--paper);
+  border: 3px solid var(--leaf-dark); padding: 4px 14px; cursor: pointer;
+}
+.themebtn:hover { background: var(--sky-top); }
+.stars { display: none; position: absolute; inset: 0; }
+:root[data-theme="dark"] .stars { display: block; }
+:root[data-theme="dark"] .cloud { display: none; }
+.stars i { position: absolute; width: 4px; height: 4px; background: #e8f7ff; opacity: .85; }
+.stars i.big { width: 6px; height: 6px; opacity: 1; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.role { min-height: 1.65em; }
+@media (max-width: 600px) { .role { min-height: 3.3em; } }
+.caret { display: inline-block; width: .5em; height: 1.05em; margin-left: 4px; vertical-align: -.15em; background: var(--leaf-dark); animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .caret { animation: none; } }
+
+/* cursor, back-to-top, pixel burst */
+@media (pointer: fine) {
+  html, body { cursor: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2222%22%20height%3D%2232%22%20viewBox%3D%220%200%2022%2032%22%20shape-rendering%3D%22crispEdges%22%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2216%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2218%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%239ad9a8%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2230%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2230%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3C%2Fsvg%3E") 1 1, auto; }
+  a, button, .card, .themebtn, .lang button { cursor: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2222%22%20height%3D%2232%22%20viewBox%3D%220%200%2022%2032%22%20shape-rendering%3D%22crispEdges%22%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2216%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2218%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%2224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2224%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2226%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%235cc3e8%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2228%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2230%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3Crect%20x%3D%2212%22%20y%3D%2230%22%20width%3D%222%22%20height%3D%222%22%20fill%3D%22%2312352f%22%2F%3E%3C%2Fsvg%3E") 1 1, pointer; }
+}
+.backtop {
+  position: fixed; left: 50%; margin-left: -26px; bottom: max(18px, env(safe-area-inset-bottom, 0px)); z-index: 20;
+  width: 52px; height: 52px; display: grid; place-items: center;
+  background: var(--leaf-dark); color: var(--btn-text); border: 3px solid var(--leaf-dark);
+  box-shadow: 4px 4px 0 var(--mint); cursor: pointer;
+  opacity: 0; visibility: hidden; transform: translateY(12px);
+  transition: opacity .2s, transform .2s, visibility .2s;
+}
+.backtop.show { opacity: 1; visibility: visible; transform: none; }
+.backtop:hover { background: var(--leaf); }
+.backtop:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--mint); }
+.backtop svg { width: 24px; height: 24px; display: block; }
+@media (prefers-reduced-motion: reduce) { .backtop { transition: none; transform: none; } }
+
+/* sticky centered top bar */
+header.top {
+  position: sticky; top: max(10px, env(safe-area-inset-top, 0px)); z-index: 30;
+  width: fit-content; max-width: 100%; margin: 12px auto 0; padding: 8px 14px;
+  justify-content: center; gap: 6px 20px;
+  background: var(--paper); border: 3px solid var(--leaf-dark); box-shadow: 4px 4px 0 var(--mint);
+}
+section.block { scroll-margin-top: 90px; }
+@media (max-width: 600px) {
+  header.top { width: 100%; padding: 6px 8px; gap: 4px 10px; }
+  nav.menu { justify-content: center; gap: 2px; }
+  nav.menu a { padding: 4px 8px; font-size: .95rem; }
+  .themebtn, .lang button { padding: 2px 10px; font-size: .9rem; }
+  section.block { scroll-margin-top: 120px; }
+}
+
+/* games */
+.card p.gstat { font-size: 1rem; }
+.card p.gstat .lbl { margin-right: 4px; }
+.card p.gname .lbl { font: 500 .95rem var(--text); color: var(--ink-soft); margin-right: 4px; }
+.card p.gname { font: 700 1.15rem var(--pixel); color: var(--ink); overflow-wrap: anywhere; }
+.icon.head { padding: 0; overflow: hidden; }
+.icon.head img { width: 100%; height: 100%; display: block; image-rendering: pixelated; }
+
+/* dark theme: the dark segment marks the active language (same as in the light theme) */
+:root[data-theme="dark"] .lang { background: var(--leaf-dark); }
+:root[data-theme="dark"] .lang button { color: var(--btn-text); }
+:root[data-theme="dark"] .lang button[aria-pressed="true"] { background: var(--sky-top); color: var(--ink); }
+:root[data-theme="dark"] .lang button:not([aria-pressed="true"]):hover { background: rgba(0,0,0,.12); }
+
+/* footer with pixel grass */
+footer.ground { position: relative; z-index: 1; margin-top: 56px; background: var(--leaf); color: #fff; padding: 28px 0 32px; }
+footer.ground::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 14px;
+  background:
+    repeating-linear-gradient(90deg, var(--grass-hi) 0 28px, transparent 28px 52px) 0 0 / 100% 7px no-repeat,
+    repeating-linear-gradient(90deg, var(--leaf) 0 44px, transparent 44px 68px) 9px 0 / 100% 14px no-repeat,
+    linear-gradient(var(--leaf), var(--leaf)) 0 100% / 100% 7px no-repeat;
+}
+footer.ground .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-weight: 500; }
+@media (max-width: 560px) { footer.ground { padding-bottom: 104px; } footer.ground .wrap { flex-direction: column; align-items: center; text-align: center; } }
+
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="sky" aria-hidden="true"><div class="stars" id="stars"></div><div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div></div>
+
+<div class="wrap">
+  <header class="top">
+    <nav class="menu" aria-label="Menu">
+      <a href="#about" data-i18n="nav_about">O mnie</a>
+      <a href="#now" data-i18n="nav_now">Praca</a>
+      <a href="#games" data-i18n="nav_games">Gry</a>
+      <a href="#hardware" data-i18n="nav_hw">Sprzęt</a>
+      <a href="#contact" data-i18n="nav_contact">Kontakt</a>
+    </nav>
+    <div class="tools"><button type="button" class="themebtn" id="theme">Dark</button><div class="lang" role="group" aria-label="Język / Language">
+      <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="nick">
+      <div>
+        <h1 class="nick" id="nick">MrDefeat_</h1>
+        <p class="role"><span class="sr" id="role-sr">Organizator eventów</span><span id="typed" aria-hidden="true">Organizator eventów</span><span class="caret" id="caret" aria-hidden="true"></span></p>
+        <p class="lead" data-i18n="lead">Z pasją organizuję różnorodne eventy i pomagam graczom. W wolnym czasie uczę się konfiguracji serwerów oraz angielskiego i japońskiego.</p>
+      </div>
+
+      <aside class="dc" id="dc" aria-label="Discord">
+        <div class="dc-avatar">
+          <div class="ph" id="dc-ph" aria-hidden="true" hidden>M</div>
+          <img id="dc-img" src="avatar.gif" onerror="this.hidden=true;document.getElementById('dc-ph').hidden=false" alt="" width="88" height="88">
+          <span class="dc-dot" id="dc-dot" hidden></span>
+        </div>
+        <div>
+          <p class="dc-name" id="dc-name">MrDefeat_</p>
+          <p class="dc-user" id="dc-user">_mrdefeat_</p>
+          <p class="dc-status" id="dc-status" data-i18n="dc_default">Znajdziesz mnie na Discordzie</p>
+          <p class="dc-act" id="dc-act"></p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="block" id="about" aria-labelledby="h-about">
+      <h2 id="h-about" data-i18n="h_about">O mnie</h2>
+      <div>
+        <p data-i18n="about">Jestem administratorem na serwerze Minecraft, gdzie z pasją organizuję różnorodne eventy i pomagam graczom. Wolny czas poświęcam na naukę konfiguracji serwerów oraz rozwijanie umiejętności językowych – głównie angielskiego i japońskiego.</p>
+      </div>
+    </section>
+
+    <section class="block wide" id="now" aria-labelledby="h-now">
+      <div>
+        <h2 id="h-now" data-i18n="h_now">Gdzie pracuję</h2>
+        <p class="sub" data-i18n="now_sub">Serwer Minecraft, którym się opiekuję.</p>
+      </div>
+      <div class="cards">
+        <a class="card featured" href="https://pixalis.pl" target="_blank" rel="noopener noreferrer">
+          <div class="card-head"><span class="icon" aria-hidden="true">P</span><h3>Pixalis.pl</h3></div>
+          <p data-i18n="p0_d">Jestem administratorem serwera Minecraft Pixalis.pl. Organizuję eventy i pomagam graczom.</p>
+          <p class="gstat"><span class="lbl" data-i18n="lbl_tenure">Staż administratora:</span> <span id="tenure"></span></p>
+          <p class="gstat"><span class="lbl" data-i18n="lbl_played">Gram na serwerze:</span> <span id="played"></span></p>
+          <ul class="tags"><li>Minecraft</li><li data-i18n="p0_tag">Administrator</li></ul>
+          <span class="more" data-i18n="p0_more">Odwiedź pixalis.pl</span>
+        </a>
+      </div>
+          <div class="joinrow" id="joinrow" hidden>
+        <span data-i18n="join_lbl">Zagraj ze mną:</span><code id="join-addr"></code>
+        <button class="btn small" type="button" id="join-copy" data-i18n="srv_copy">Skopiuj adres</button>
+        <span role="status" aria-live="polite" id="join-copied"></span>
+      </div>
+    </section>
+
+    <section class="block wide" id="games" aria-labelledby="h-games">
+      <div>
+        <h2 id="h-games" data-i18n="h_games">Gry</h2>
+        <p class="sub" data-i18n="games_sub">Moje konta w grach.</p>
+      </div>
+      <div class="cards">
+        <!-- Nowa gra: skopiuj blok <a class="card"> i zmień nick, adres oraz literę w ikonie.
+             Statystykę (np. poziom) dodasz linijką: <p class="gstat"><span class="lbl">Poziom:</span> 25</p> -->
+        <div class="card">
+          <div class="card-head"><span class="icon head"><img src="https://mc-heads.net/avatar/MrDefeat_/64" alt="" width="38" height="38" onerror="this.parentNode.textContent='M'"></span><h3>Minecraft</h3></div>
+          <p class="gname"><span class="lbl">Nick:</span> MrDefeat_</p>
+          <p class="gstat"><span class="lbl" data-i18n="lbl_role">Rola:</span> <span data-i18n="mc_role">Administrator serwera Pixalis.pl od 19.01.2026</span></p>
+          <div class="skin3d" id="skin3d" aria-hidden="true" hidden title="3D"></div>
+        </div>
+        <a class="card" href="https://store.epicgames.com/u/e06198f911174bfb90493274d3d4b3bb" target="_blank" rel="noopener noreferrer">
+          <div class="card-head"><span class="icon" aria-hidden="true">E</span><h3>Epic Games</h3></div>
+          <p class="gname"><span class="lbl">Nick:</span> MrDefeat_</p>
+          <p class="gstat"><span class="lbl">Rocket League:</span> <span data-i18n="rl_rank">Gold I, dywizja 3</span></p>
+          <span class="more" data-i18n="games_open">Otwórz profil</span>
+        </a>
+        <a class="card" href="https://steamcommunity.com/profiles/76561199078973629/" target="_blank" rel="noopener noreferrer">
+          <div class="card-head"><span class="icon" aria-hidden="true">S</span><h3>Steam</h3></div>
+          <p class="gname"><span class="lbl">Nick:</span> MrDefeat_</p>
+          <span class="more" data-i18n="games_open">Otwórz profil</span>
+        </a>
+        <a class="card" href="https://steamcommunity.com/profiles/76561199831604446/" target="_blank" rel="noopener noreferrer">
+          <div class="card-head"><span class="icon" aria-hidden="true">S</span><h3>Steam</h3></div>
+          <p class="gname"><span class="lbl">Nick:</span> MrDefeat</p>
+          <span class="more" data-i18n="games_open">Otwórz profil</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="block" id="hardware" aria-labelledby="h-hw">
+      <h2 id="h-hw" data-i18n="h_hw">Mój sprzęt</h2>
+      <dl class="specs">
+        <!-- Chcesz dodać coś jeszcze (procesor, monitor, myszka...)? Skopiuj blok <div> poniżej i zmień teksty. -->
+        <div><dt><svg class="ic" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" fill="currentColor"><rect x="0" y="0" width="1" height="1"/><rect x="2" y="0" width="1" height="1"/><rect x="4" y="0" width="1" height="1"/><rect x="6" y="0" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="3" y="1" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="5" y="2" width="1" height="1"/><rect x="6" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="7" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="3" y="5" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="5" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="7" y="5" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="2" y="6" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/><rect x="4" y="6" width="1" height="1"/><rect x="5" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="2" y="7" width="1" height="1"/><rect x="4" y="7" width="1" height="1"/><rect x="6" y="7" width="1" height="1"/></svg><span data-i18n="hw_cpu">Procesor</span></dt><dd>AMD Ryzen 5 3600</dd></div>
+        <div><dt><svg class="ic" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" fill="currentColor"><rect x="0" y="1" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="3" y="1" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/><rect x="7" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="7" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="7" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="3" y="4" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="7" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="2" y="6" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/><rect x="4" y="6" width="1" height="1"/><rect x="5" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/><rect x="7" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="1" y="7" width="1" height="1"/></svg><span data-i18n="hw_gpu">Karta graficzna</span></dt><dd>NVIDIA GeForce GTX 1080 (8 GB)</dd></div>
+        <div><dt><svg class="ic" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" fill="currentColor"><rect x="0" y="1" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="3" y="1" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/><rect x="7" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="6" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="7" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="3" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/></svg><span data-i18n="hw_ram">Pamięć RAM</span></dt><dd>16 GB</dd></div>
+        <div><dt><svg class="ic" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" fill="currentColor"><rect x="0" y="0" width="1" height="1"/><rect x="1" y="0" width="1" height="1"/><rect x="2" y="0" width="1" height="1"/><rect x="3" y="0" width="1" height="1"/><rect x="4" y="0" width="1" height="1"/><rect x="5" y="0" width="1" height="1"/><rect x="6" y="0" width="1" height="1"/><rect x="7" y="0" width="1" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="7" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="7" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="7" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="3" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="3" y="5" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="2" y="6" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/><rect x="4" y="6" width="1" height="1"/><rect x="5" y="6" width="1" height="1"/></svg><span data-i18n="hw_mon">Monitory</span></dt><dd>Philips 243S7<br>Dell P2217H</dd></div>
+        <div><dt><svg class="ic" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" fill="currentColor"><rect x="2" y="0" width="1" height="1"/><rect x="3" y="0" width="1" height="1"/><rect x="4" y="0" width="1" height="1"/><rect x="5" y="0" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="7" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="7" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="7" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/><rect x="7" y="6" width="1" height="1"/></svg><span data-i18n="hw_hs">Słuchawki</span></dt><dd>KRUX EDIS 1000</dd></div>
+        <div><dt><svg class="ic" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" fill="currentColor"><rect x="0" y="0" width="1" height="1"/><rect x="1" y="0" width="1" height="1"/><rect x="2" y="0" width="1" height="1"/><rect x="3" y="0" width="1" height="1"/><rect x="4" y="0" width="1" height="1"/><rect x="5" y="0" width="1" height="1"/><rect x="6" y="0" width="1" height="1"/><rect x="7" y="0" width="1" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="3" y="1" width="1" height="1"/><rect x="7" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="5" y="2" width="1" height="1"/><rect x="7" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="7" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="3" y="4" width="1" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="3" y="5" width="1" height="1"/><rect x="5" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="7" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="7" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="1" y="7" width="1" height="1"/><rect x="2" y="7" width="1" height="1"/><rect x="3" y="7" width="1" height="1"/><rect x="4" y="7" width="1" height="1"/><rect x="5" y="7" width="1" height="1"/><rect x="6" y="7" width="1" height="1"/><rect x="7" y="7" width="1" height="1"/></svg><span data-i18n="hw_mb">Płyta główna</span></dt><dd>MSI MS-7B86</dd></div>
+        <div><dt><svg class="ic" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" fill="currentColor"><rect x="1" y="1" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="5" y="2" width="1" height="1"/><rect x="6" y="2" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="5" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/></svg><span data-i18n="hw_os">System</span></dt><dd>Windows 11 Home</dd></div>
+      </dl>
+    </section>
+
+    <section class="block" id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact" data-i18n="h_contact">Kontakt</h2>
+      <div>
+        <p data-i18n="contact">Najłatwiej napisać do mnie na Discordzie.</p>
+        <div class="contact-row">
+          <span class="handle" id="handle">_mrdefeat_</span>
+          <button class="btn" type="button" id="copy" data-i18n="copy">Skopiuj nick</button>
+          <span role="status" aria-live="polite" id="copied"></span>
+        </div>
+        <p class="mail"><span data-i18n="mail_label">E-mail:</span> <a href="mailto:business.mrdefeat@gmail.com">business.mrdefeat@gmail.com</a></p>
+        <div class="avail" id="avail">
+          <h3 data-i18n="avail_h">Dostępność</h3>
+          <p data-i18n="avail_wd">Pon.–pt.: 15:00–22:00</p>
+          <p data-i18n="avail_we">Sob.–niedz.: 12:00–21:00</p>
+          <p class="avail-note" data-i18n="avail_note">Jeśli ktoś czegoś potrzebuje albo ma inną sprawę, jestem dostępny w tych godzinach (czas polski).</p>
+          <p class="avail-now"><span class="dc-dot offline" id="avail-dot"></span><span id="avail-now" role="status"></span></p>
+        </div>
+        <form class="msgform" id="msg-form" novalidate hidden>
+          <h3 data-i18n="form_h">Napisz do mnie</h3>
+          <p class="avail-note" data-i18n="form_hint">Wiadomość trafi prosto na mój e-mail.</p>
+          <label><span data-i18n="form_name">Imię lub nick</span><input type="text" id="f-name" maxlength="60" autocomplete="name"></label>
+          <label><span data-i18n="form_email">Jak mam odpisać? (opcjonalnie)</span><input type="text" id="f-email" maxlength="100" autocomplete="off" data-i18n-ph="form_email_ph" placeholder="np. nick na Discordzie albo e-mail"></label>
+          <label><span data-i18n="form_msg">Wiadomość</span><textarea id="f-msg" rows="5" maxlength="2000" required></textarea></label>
+          <input type="checkbox" id="f-bot" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+          <div class="form-row"><button class="btn" type="submit" id="f-send" data-i18n="form_send">Wyślij</button><span role="status" aria-live="polite" id="f-status"></span></div>
+        </form>
+      </div>
+    </section>
+  </main>
+</div>
+
+<button type="button" class="backtop" id="backtop" aria-label="Back to top" title="Back to top">
+  <svg viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" fill="currentColor"><rect x="3" y="0" width="2" height="1"/><rect x="2" y="1" width="4" height="1"/><rect x="1" y="2" width="6" height="1"/><rect x="0" y="3" width="8" height="1"/><rect x="3" y="4" width="2" height="4"/></svg>
+</button>
+
+<footer class="ground">
+  <div class="wrap privacy-wrap"><p class="privacy" data-i18n="privacy">Prywatność: wiadomości z formularza trafiają tylko do mnie, a strona używa anonimowych statystyk bez ciasteczek. Nie sprzedaję ani nie udostępniam żadnych danych.</p></div>
+  <div class="wrap"><span class="fl"><span>© 2026 MrDefeat_</span><button type="button" class="calmbtn" id="calm" aria-pressed="false"></button></span><span class="fr"><button type="button" class="secret" id="secret" lang="ja">よろしくお願いします</button></span></div>
+</footer>
+<div class="secret-toast" id="secret-toast" lang="ja" role="status" hidden>秘密の入口を見つけました！</div>
+
+<script>
+/* ============ USTAWIENIA / SETTINGS ============ */
+// Aby karta Discord pokazywała status na żywo:
+// 1) wejdź na serwer Discord "Lanyard" (discord.gg/lanyard) – to darmowa usługa,
+// 2) włącz w Discordzie tryb dewelopera (Ustawienia > Zaawansowane) i skopiuj swoje ID (PPM na swoim profilu > Kopiuj ID użytkownika),
+// 3) wklej ID poniżej, np. "123456789012345678".
+const DISCORD_ID = "1192945284720898049";
+const DISCORD_HANDLE = "_mrdefeat_";
+
+// Status serwera Minecraft: wpisz adres (np. "mc.twojserwer.pl" lub "mc.twojserwer.pl:25565").
+// Dopóki jest pusty, sekcja "Serwer" jest ukryta.
+const SERVER_ADDRESS = "Pixalis.pl";
+// Formularz kontaktowy: wpisz klucz z web3forms.com (patrz README). Dopóki pusty, formularz jest ukryty.
+// Prywatne statystyki (Umami Cloud): wpisz Website ID z cloud.umami.is (patrz README). Dopóki pusty, nic się nie ładuje.
+const UMAMI_ID = "3f1b5935-4a8b-4e33-b40e-7fcf1239e8c2";
+const FORM_KEY = "ee1e240d-a4ff-48b5-aa21-b84255c4c9d3";
+const SERVER_NAME = "Pixalis.pl"; // nazwa wyświetlana na stronie
+/* ================================================ */
+
+const T = {
+  pl: {
+    privacy: "Prywatność: wiadomości z formularza trafiają tylko do mnie, a strona używa anonimowych statystyk bez ciasteczek. Nie sprzedaję ani nie udostępniam żadnych danych.",
+    join_lbl: "Zagraj ze mną:", calm_off: "Wyłącz animacje", calm_on: "Włącz animacje",
+    form_h: "Napisz do mnie", form_hint: "Możesz napisać bez podawania e-maila. Jeśli chcesz odpowiedź, zostaw nick na Discordzie lub inny kontakt.", form_name: "Imię lub nick", form_email: "Jak mam odpisać? (opcjonalnie)", form_email_ph: "np. nick na Discordzie albo e-mail", form_msg: "Wiadomość", form_send: "Wyślij", form_sending: "Wysyłanie…", form_ok: "Wysłano. Dziękuję!", form_err: "Nie udało się wysłać. Spróbuj później lub napisz na Discordzie.", form_short: "Napisz wiadomość.", form_wait: "Poczekaj chwilę przed kolejną wiadomością.",
+    avail_dc: "Discord:", avail_h: "Dostępność", avail_wd: "Pon.–pt.: 15:00–22:00", avail_we: "Sob.–niedz.: 12:00–21:00", avail_note: "Jeśli ktoś czegoś potrzebuje albo ma inną sprawę, jestem dostępny w tych godzinach (czas polski).", avail_on: "Teraz jestem dostępny", avail_off: "Teraz jestem niedostępny",
+    nav_about: "O mnie", nav_now: "Praca", nav_games: "Gry", h_games: "Gry", games_sub: "Moje konta w grach.", games_open: "Otwórz profil", lbl_role: "Rola:", rl_rank: "Gold I, dywizja 3", lbl_tenure: "Staż administratora:", lbl_played: "Gram na serwerze:", mc_role: "Administrator serwera Pixalis.pl od 19.01.2026", nav_hw: "Sprzęt", nav_contact: "Kontakt",
+    h_now: "Gdzie pracuję",
+    now_sub: "Serwer Minecraft, którym się opiekuję.",
+    p0_d: "Jestem administratorem serwera Minecraft Pixalis.pl. Organizuję eventy i pomagam graczom.",
+    p0_tag: "Administrator",
+    p0_more: "Odwiedź pixalis.pl",
+    srv_copy: "Skopiuj adres", srv_copied: "Skopiowano",
+    phrases: ["Organizator eventów", "Uczę się konfiguracji serwerów", "Uczę się japońskiego"],
+    theme_dark: "Ciemny", theme_light: "Jasny", backtop: "Wróć na górę",
+    lead: "Z pasją organizuję różnorodne eventy i pomagam graczom. W wolnym czasie uczę się konfiguracji serwerów oraz angielskiego i japońskiego.",
+    h_about: "O mnie",
+    about: "Jestem administratorem na serwerze Minecraft, gdzie z pasją organizuję różnorodne eventy i pomagam graczom. Wolny czas poświęcam na naukę konfiguracji serwerów oraz rozwijanie umiejętności językowych – głównie angielskiego i japońskiego.",
+    h_hw: "Mój sprzęt", hw_cpu: "Procesor", hw_ram: "Pamięć RAM", hw_gpu: "Karta graficzna", hw_mon: "Monitory", hw_hs: "Słuchawki",hw_mb: "Płyta główna", hw_os: "System",
+    h_contact: "Kontakt", contact: "Najłatwiej napisać do mnie na Discordzie albo mailem.", mail_label: "E-mail:",
+    copy: "Skopiuj nick", copied: "Skopiowano", copyfail: "Nie udało się skopiować",
+    dc_default: "Znajdziesz mnie na Discordzie",
+    online: "Online", idle: "Zaraz wracam", dnd: "Nie przeszkadzać", offline: "Offline",
+    playing: "Gra w", listening: "Słucha"
+  },
+  ja: {
+    privacy: "プライバシー：フォームのメッセージは私にだけ届きます。このサイトはクッキーを使わない匿名の統計を利用しています。データを販売・共有することはありません。",
+    join_lbl: "一緒に遊ぼう：", calm_off: "アニメーションを切る", calm_on: "アニメーションを入れる",
+    form_h: "メッセージを送る", form_hint: "メールアドレスは不要です。返信が必要な場合は、Discord名などの連絡先を書いてください。", form_name: "お名前またはニックネーム", form_email: "返信方法（任意）", form_email_ph: "例：Discord名またはメール", form_msg: "メッセージ", form_send: "送信", form_sending: "送信中…", form_ok: "送信しました。ありがとうございます！", form_err: "送信できませんでした。後でもう一度お試しいただくか、Discordでご連絡ください。", form_short: "メッセージを入力してください。", form_wait: "次のメッセージまで少しお待ちください。",
+    nav_about: "自己紹介", nav_now: "お仕事", nav_games: "ゲーム", h_games: "ゲーム", games_sub: "ゲームのアカウント。", games_open: "プロフィールを開く", lbl_role: "役割：", rl_rank: "ゴールドI・ディビジョン3", lbl_tenure: "管理者歴：", lbl_played: "サーバー歴：", mc_role: "Pixalis.plサーバー管理者（2026年1月19日から）", nav_hw: "機材", nav_contact: "連絡先",
+    h_now: "活動の場",
+    now_sub: "私が運営を担当しているMinecraftサーバー。",
+    p0_d: "Minecraftサーバー「Pixalis.pl」の管理者です。イベントを企画し、プレイヤーをサポートしています。",
+    p0_tag: "管理者",
+    p0_more: "pixalis.plを見る",
+    srv_copy: "アドレスをコピー", srv_copied: "コピーしました",
+    phrases: ["イベント運営者", "サーバー設定を勉強中", "日本語を勉強中"],
+    theme_dark: "ダーク", theme_light: "ライト", backtop: "トップへ戻る",
+    lead: "イベントの企画とプレイヤーのサポートに情熱を注いでいます。空き時間は、サーバー設定と英語・日本語の勉強に使っています。",
+    h_about: "自己紹介",
+    about: "Minecraftサーバーの管理者として、さまざまなイベントを企画し、プレイヤーをサポートしています。空き時間は、サーバー設定の勉強と、英語や日本語を中心とした語学力の向上に充てています。",
+    h_hw: "私の機材", hw_cpu: "プロセッサ", hw_ram: "メモリ", hw_gpu: "グラフィックカード", hw_mon: "モニター", hw_hs: "ヘッドセット", hw_mb: "マザーボード", hw_os: "OS",
+    h_contact: "連絡先", contact: "Discordかメールが一番連絡しやすいです。", mail_label: "メール：",
+    copy: "ユーザー名をコピー", copied: "コピーしました", copyfail: "コピーできませんでした",
+    dc_default: "Discordで見つけてください",
+    online: "オンライン", idle: "離席中", dnd: "取り込み中", offline: "オフライン",
+    playing: "プレイ中", listening: "再生中",
+    avail_dc: "Discord：", avail_h: "対応可能な時間", avail_wd: "月〜金：15:00〜22:00", avail_we: "土・日：12:00〜21:00", avail_note: "ご用件のある方は、この時間帯にご連絡ください（ポーランド時間）。", avail_on: "現在、対応可能です", avail_off: "現在、対応できません"
+  },
+  en: {
+    privacy: "Privacy: messages from the form go only to me, and this site uses anonymous, cookie-free statistics. I don't sell or share any data.",
+    join_lbl: "Play with me:", calm_off: "Turn off animations", calm_on: "Turn on animations",
+    form_h: "Send me a message", form_hint: "You don't need to give an email. If you want a reply, leave your Discord name or another contact.", form_name: "Name or nickname", form_email: "How can I reply? (optional)", form_email_ph: "e.g. your Discord name or email", form_msg: "Message", form_send: "Send", form_sending: "Sending…", form_ok: "Sent. Thank you!", form_err: "Couldn't send it. Try again later or message me on Discord.", form_short: "Please write a message.", form_wait: "Please wait a moment before sending another message.",
+    avail_dc: "Discord:", avail_h: "Availability", avail_wd: "Mon–Fri: 3 PM – 10 PM", avail_we: "Sat–Sun: 12 PM – 9 PM", avail_note: "If anyone needs something or has any other matter, I'm available during these hours (Polish time).", avail_on: "I'm available right now", avail_off: "I'm not available right now",
+    nav_about: "About", nav_now: "Work", nav_games: "Games", h_games: "Games", games_sub: "My game accounts.", games_open: "Open profile", lbl_role: "Role:", rl_rank: "Gold I, division 3", lbl_tenure: "Time as admin:", lbl_played: "Playing on the server:", mc_role: "Administrator of the Pixalis.pl server since 19 Jan 2026", nav_hw: "Hardware", nav_contact: "Contact",
+    h_now: "Where I work",
+    now_sub: "The Minecraft server I look after.",
+    p0_d: "I'm the administrator of the Pixalis.pl Minecraft server. I run events and help players.",
+    p0_tag: "Administrator",
+    p0_more: "Visit pixalis.pl",
+    srv_copy: "Copy address", srv_copied: "Copied",
+    phrases: ["Event organizer", "Learning server configuration", "Learning Japanese"],
+    theme_dark: "Dark", theme_light: "Light", backtop: "Back to top",
+    lead: "I passionately organize a variety of events and help players. In my free time I learn server configuration, English and Japanese.",
+    h_about: "About me",
+    about: "I'm an administrator on a Minecraft server, where I passionately organize a variety of events and help players. I spend my free time learning server configuration and developing my language skills – mainly English and Japanese.",
+    h_hw: "My hardware", hw_cpu: "Processor", hw_ram: "RAM", hw_gpu: "Graphics card", hw_mon: "Monitors", hw_hs: "Headset",hw_mb: "Motherboard", hw_os: "System",
+    h_contact: "Contact", contact: "The easiest way to reach me is on Discord or by email.", mail_label: "Email:",
+    copy: "Copy username", copied: "Copied", copyfail: "Couldn't copy",
+    dc_default: "Find me on Discord",
+    online: "Online", idle: "Away", dnd: "Do not disturb", offline: "Offline",
+    playing: "Playing", listening: "Listening to"
+  }
+};
+
+let lang = "pl";
+let presence = null; // last Lanyard data
+
+function storeGet() { try { return localStorage.getItem("lang"); } catch (e) { return null; } }
+function storeSet(v) { try { localStorage.setItem("lang", v); } catch (e) {} }
+
+function applyLang(l) {
+  lang = l;
+  document.documentElement.lang = l;
+  document.querySelectorAll("[data-i18n]").forEach(function (el) {
+    var v = T[l][el.dataset.i18n];
+    if (v) el.textContent = v;
+  });
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.setAttribute("aria-pressed", String(b.dataset.lang === l));
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(function (el) { var v = T[lang][el.getAttribute("data-i18n-ph")]; if (v) el.placeholder = v; });
+  renderPresence();
+  if (typeof renderCalmBtn === "function") renderCalmBtn();
+  if (typeof renderAvail === "function") renderAvail();
+  if (typeof renderTenure === "function") renderTenure();
+  updateThemeBtn();
+  startTyping();
+  var bt = $("backtop"); bt.setAttribute("aria-label", T[l].backtop); bt.title = T[l].backtop;
+}
+
+document.querySelectorAll(".lang button").forEach(function (b) {
+  b.addEventListener("click", function () { storeSet(b.dataset.lang); applyLang(b.dataset.lang); });
+});
+
+
+/* ---------- Discord (Lanyard) ---------- */
+var $ = function (id) { return document.getElementById(id); };
+
+function avatarUrl(u) {
+  if (u.avatar) {
+    var ext = u.avatar.indexOf("a_") === 0 ? "gif" : "png";
+    return "https://cdn.discordapp.com/avatars/" + u.id + "/" + u.avatar + "." + ext + "?size=256";
+  }
+  var idx = 0;
+  try { idx = Number((BigInt(u.id) >> 22n) % 6n); } catch (e) {}
+  return "https://cdn.discordapp.com/embed/avatars/" + idx + ".png";
+}
+
+function renderPresence() {
+  var dot = $("dc-dot"), act = $("dc-act");
+  if (!presence) { dot.hidden = true; act.textContent = ""; $("dc-status").textContent = T[lang].dc_default; return; }
+  var u = presence.discord_user;
+  $("dc-name").textContent = u.global_name || u.username;
+  $("dc-user").textContent = u.username;
+  var st = presence.discord_status || "offline";
+  dot.hidden = false;
+  dot.className = "dc-dot " + st;
+  $("dc-status").textContent = T[lang][st] || T[lang].offline;
+  if (typeof renderAvail === "function") renderAvail();
+
+  var img = $("dc-img");
+  if (img.dataset.src !== avatarUrl(u)) {
+    img.dataset.src = avatarUrl(u);
+    img.onload = function () { img.hidden = false; $("dc-ph").hidden = true; };
+    img.onerror = function () { img.onerror = null; img.src = "avatar.gif"; };
+    img.src = img.dataset.src;
+  }
+
+  act.textContent = "";
+  var acts = presence.activities || [];
+  var custom = acts.find(function (a) { return a.type === 4 && a.state; });
+  var main = acts.find(function (a) { return a.type === 0 || a.type === 2; });
+  if (main) {
+    var label = main.type === 2 ? T[lang].listening : T[lang].playing;
+    var strong = document.createElement("b");
+    strong.textContent = main.type === 2 ? (main.details || "Spotify") : main.name;
+    act.append(label + " ", strong);
+    if (main.type === 2 && main.state) act.append(" – " + main.state.replace(/;/g, ","));
+  } else if (custom) {
+    act.textContent = custom.state;
+  }
+}
+
+async function loadPresence() {
+  if (!DISCORD_ID) return;
+  try {
+    var r = await fetch("https://api.lanyard.rest/v1/users/" + encodeURIComponent(DISCORD_ID));
+    var j = await r.json();
+    presence = j && j.success ? j.data : null;
+  } catch (e) { presence = null; }
+  renderPresence();
+}
+
+/* ---------- theme (light / dark) ---------- */
+function getTheme() { return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light"; }
+function updateThemeBtn() { $("theme").textContent = getTheme() === "dark" ? T[lang].theme_light : T[lang].theme_dark; }
+function setTheme(t) {
+  if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  else document.documentElement.removeAttribute("data-theme");
+  try { localStorage.setItem("theme", t); } catch (e) {}
+  var m = document.querySelector('meta[name="theme-color"]');
+  if (m) m.setAttribute("content", t === "dark" ? "#0c2a36" : "#5cc3e8");
+  updateThemeBtn();
+}
+$("theme").addEventListener("click", function () { setTheme(getTheme() === "dark" ? "light" : "dark"); });
+if (getTheme() === "dark") setTheme("dark");
+
+/* stars for the night sky */
+(function () {
+  var box = $("stars"), seed = 7;
+  function rnd() { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; }
+  for (var k = 0; k < 55; k++) {
+    var i = document.createElement("i");
+    i.style.left = (rnd() * 100).toFixed(2) + "%";
+    i.style.top = (rnd() * 78).toFixed(2) + "%";
+    if (rnd() < .22) i.className = "big";
+    box.appendChild(i);
+  }
+})();
+
+/* ---------- typing effect under the nick ---------- */
+var typeTimer = null;
+var osReduce = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+var calmPref = null; try { calmPref = localStorage.getItem("calm"); } catch (e) {}
+var reduceMotion = calmPref === "1" || (osReduce && calmPref !== "0");
+function startTyping() {
+  clearTimeout(typeTimer);
+  var ph = T[lang].phrases, typed = $("typed");
+  $("role-sr").textContent = ph[0];
+  if (reduceMotion) { typed.textContent = ph[0]; $("caret").hidden = true; return; }
+  $("caret").hidden = false;
+  var i = 0, n = 0, erasing = false;
+  (function tick() {
+    var w = ph[i];
+    if (!erasing) {
+      n++; typed.textContent = w.slice(0, n);
+      if (n === w.length) { erasing = true; typeTimer = setTimeout(tick, 1900); return; }
+      typeTimer = setTimeout(tick, 75);
+    } else {
+      n--; typed.textContent = w.slice(0, n);
+      if (n === 0) { erasing = false; i = (i + 1) % ph.length; typeTimer = setTimeout(tick, 350); return; }
+      typeTimer = setTimeout(tick, 35);
+    }
+  })();
+}
+
+/* ---------- licznik stażu administratora (admin od 19.01.2026, gra od 20.01.2025) ---------- */
+var TENURE_START = Date.UTC(2026, 0, 18, 23, 0); /* admin od 19.01.2026 */
+var PLAYED_START = Date.UTC(2025, 0, 20, 9, 9); /* gra od 20.01.2025 10:09 */
+function plural(n, one, few, many) {
+  if (n === 1) return one;
+  var d = n % 10, t = n % 100;
+  return (d >= 2 && d <= 4 && !(t >= 12 && t <= 14)) ? few : many;
+}
+function renderSpan(id, START) {
+  var el = document.getElementById(id); if (!el) return;
+  var s = new Date(START), n = new Date(), now = n.getTime();
+  if (now < START) { el.textContent = ""; return; }
+  var y = n.getUTCFullYear() - s.getUTCFullYear(), m = n.getUTCMonth() - s.getUTCMonth(), d = n.getUTCDate() - s.getUTCDate();
+  if (d < 0) { m--; d += new Date(Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), 0)).getUTCDate(); }
+  if (m < 0) { y--; m += 12; }
+  var total = Math.floor((now - START) / 864e5), parts = [];
+  if (lang === "pl") {
+    if (y) parts.push(y + " " + plural(y, "rok", "lata", "lat"));
+    if (m) parts.push(m + " " + plural(m, "miesiąc", "miesiące", "miesięcy"));
+    parts.push(d + " " + (d === 1 ? "dzień" : "dni"));
+    el.textContent = parts.join(", ") + " (" + total + " " + (total === 1 ? "dzień" : "dni") + " łącznie)";
+  } else if (lang === "ja") {
+    el.textContent = (y ? y + "年" : "") + (m ? m + "か月" : "") + d + "日（合計" + total + "日）";
+  } else {
+    if (y) parts.push(y + (y === 1 ? " year" : " years"));
+    if (m) parts.push(m + (m === 1 ? " month" : " months"));
+    parts.push(d + (d === 1 ? " day" : " days"));
+    el.textContent = parts.join(", ") + " (" + total + " days total)";
+  }
+}
+
+function renderTenure() { renderSpan("tenure", TENURE_START); renderSpan("played", PLAYED_START); }
+
+/* ---------- wolne, płynne przewijanie ---------- */
+var glideRaf = 0;
+function glideTo(targetY) {
+  var maxY = document.documentElement.scrollHeight - window.innerHeight;
+  targetY = Math.max(0, Math.min(targetY, maxY));
+  var startY = window.scrollY || document.documentElement.scrollTop, dist = targetY - startY;
+  if (reduceMotion || Math.abs(dist) < 2) { window.scrollTo(0, targetY); return; }
+  var dur = Math.min(1800, Math.max(700, 500 + Math.abs(dist) * 0.45)), t0 = null;
+  cancelAnimationFrame(glideRaf);
+  function ease(t) { return t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+  function step(ts) {
+    if (t0 === null) t0 = ts;
+    var k = Math.min(1, (ts - t0) / dur);
+    window.scrollTo(0, startY + dist * ease(k));
+    if (k < 1) glideRaf = requestAnimationFrame(step);
+  }
+  glideRaf = requestAnimationFrame(step);
+}
+["wheel", "touchstart", "keydown"].forEach(function (ev) {
+  window.addEventListener(ev, function () { cancelAnimationFrame(glideRaf); }, { passive: true });
+});
+document.addEventListener("click", function (e) {
+  var a = e.target.closest && e.target.closest('a[href^="#"]');
+  if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey) return;
+  var id = a.getAttribute("href").slice(1), el = id && document.getElementById(id);
+  if (!el || el.hidden) return;
+  e.preventDefault();
+  var mt = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
+  glideTo(el.getBoundingClientRect().top + (window.scrollY || document.documentElement.scrollTop) - mt);
+  try { history.replaceState(null, "", "#" + id); } catch (err) {}
+});
+
+/* ---------- back to top ---------- */
+(function () {
+  var bt = $("backtop");
+  function toggle() { bt.classList.toggle("show", (window.scrollY || document.documentElement.scrollTop) > 500); }
+  window.addEventListener("scroll", toggle, { passive: true });
+  toggle();
+  bt.addEventListener("click", function () { glideTo(0); });
+})();
+
+/* ---------- pixel burst on click ---------- */
+document.addEventListener("click", function (e) {
+  if (reduceMotion || !e.target.closest) return;
+  var el = e.target.closest("button, a.card, a.btn");
+  if (!el) return;
+  var x = e.clientX, y = e.clientY;
+  if (!x && !y) { var r = el.getBoundingClientRect(); x = r.left + r.width / 2; y = r.top + r.height / 2; }
+  var colors = getTheme() === "dark" ? ["#8fe0a6", "#3fa66b", "#5cc3e8", "#e4f4ee"] : ["#3fa66b", "#9ad9a8", "#5cc3e8", "#1c5a49"];
+  for (var k = 0; k < 12; k++) {
+    var p = document.createElement("span"), size = k % 3 === 0 ? 8 : 5, ang = (k / 12) * Math.PI * 2 + Math.random() * .4, dist = 24 + Math.random() * 30;
+    p.style.cssText = "position:fixed;z-index:100;pointer-events:none;left:" + (x - size / 2) + "px;top:" + (y - size / 2) + "px;width:" + size + "px;height:" + size + "px;background:" + colors[k % colors.length];
+    document.body.appendChild(p);
+    var a = p.animate([{ transform: "translate(0,0)", opacity: 1 }, { transform: "translate(" + Math.round(Math.cos(ang) * dist) + "px," + Math.round(Math.sin(ang) * dist + 8) + "px)", opacity: 0 }], { duration: 520, easing: "steps(6, end)" });
+    a.onfinish = (function (n) { return function () { n.remove(); }; })(p);
+  }
+});
+
+/* ---------- copy username ---------- */
+$("copy").addEventListener("click", async function () {
+  var msg = $("copied");
+  try { await navigator.clipboard.writeText(DISCORD_HANDLE); msg.textContent = T[lang].copied; }
+  catch (e) { msg.textContent = T[lang].copyfail; }
+  setTimeout(function () { msg.textContent = ""; }, 2200);
+});
+
+/* ---------- dostępność (czas polski) ---------- */
+function renderAvail() {
+  var el = document.getElementById("avail-now"), dot = document.getElementById("avail-dot"); if (!el) return;
+  var on = false;
+  try {
+    var parts = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Warsaw", weekday: "short", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(new Date()), o = {};
+    parts.forEach(function (p) { o[p.type] = p.value; });
+    var h = (parseInt(o.hour, 10) % 24) + parseInt(o.minute, 10) / 60, weekend = o.weekday === "Sat" || o.weekday === "Sun";
+    on = weekend ? (h >= 12 && h < 21) : (h >= 15 && h < 22);
+  } catch (e) { on = false; }
+  el.textContent = T[lang][on ? "avail_on" : "avail_off"];
+  dot.className = "dc-dot " + (on ? "online" : "offline");
+}
+setInterval(function () { if (typeof renderAvail === "function") renderAvail(); }, 60000);
+
+/* ---------- pasek postępu przewijania ---------- */
+(function () {
+  var bar = document.getElementById("progress");
+  function upd() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var k = max > 0 ? Math.min(1, Math.max(0, (window.scrollY || document.documentElement.scrollTop) / max)) : 0;
+    bar.style.transform = "scaleX(" + k + ")";
+  }
+  window.addEventListener("scroll", upd, { passive: true });
+  window.addEventListener("resize", upd);
+  upd();
+})();
+
+/* ---------- tajemnicze wejście: wersja tylko po japońsku ---------- */
+(function () {
+  var b = document.getElementById("secret"), toast = document.getElementById("secret-toast"), tt;
+  b.addEventListener("click", function () {
+    applyLang("ja"); track("secret-japanese");
+    glideTo(0);
+    toast.hidden = false; clearTimeout(tt); tt = setTimeout(function () { toast.hidden = true; }, 3200);
+  });
+})();
+
+/* ---------- wsuwanie sekcji przy przewijaniu ---------- */
+(function () {
+  var els = document.querySelectorAll(".block, .hero");
+  if (!("IntersectionObserver" in window) || reduceMotion) return;
+  document.documentElement.classList.add("rv");
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: "0px 0px -6% 0px" });
+  els.forEach(function (el) { io.observe(el); });
+  setTimeout(function () { els.forEach(function (el) { el.classList.add("in"); }); }, 6000);
+})();
+
+/* ---------- formularz kontaktowy (Web3Forms -> e-mail) ---------- */
+(function () {
+  var f = document.getElementById("msg-form"); if (!f || !FORM_KEY) return;
+  f.hidden = false;
+  var st = document.getElementById("f-status"), btn = document.getElementById("f-send");
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var msg = document.getElementById("f-msg").value.trim();
+    if (msg.length < 3) { st.textContent = T[lang].form_short; return; }
+    if (document.getElementById("f-bot").checked) return;
+    var last = 0; try { last = Number(localStorage.getItem("lastmsg") || 0); } catch (er) {}
+    if (Date.now() - last < 60000) { st.textContent = T[lang].form_wait; return; }
+    btn.disabled = true; st.textContent = T[lang].form_sending;
+    var name = document.getElementById("f-name").value.trim(), email = document.getElementById("f-email").value.trim();
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({ access_key: FORM_KEY, subject: "Wiadomość ze strony MrDefeat_", from_name: name || "Strona", name: name, contact: email, email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? email : undefined, message: msg })
+    }).then(function (r) { return r.json(); }).then(function (j) {
+      if (j && j.success) {
+        st.textContent = T[lang].form_ok; f.reset(); track("message-sent");
+        try { localStorage.setItem("lastmsg", String(Date.now())); } catch (er) {}
+      } else st.textContent = T[lang].form_err;
+    }).catch(function () { st.textContent = T[lang].form_err; }).then(function () { btn.disabled = false; });
+  });
+})();
+
+/* ---------- tryb bez animacji ---------- */
+function renderCalmBtn() {
+  var b = $("calm"); if (!b) return;
+  b.textContent = T[lang][reduceMotion ? "calm_on" : "calm_off"];
+  b.setAttribute("aria-pressed", String(reduceMotion));
+}
+document.documentElement.classList.toggle("calm", reduceMotion);
+$("calm").addEventListener("click", function () {
+  reduceMotion = !reduceMotion;
+  try { localStorage.setItem("calm", reduceMotion ? "1" : "0"); } catch (e) {}
+  document.documentElement.classList.toggle("calm", reduceMotion);
+  document.querySelectorAll(".block, .hero").forEach(function (el) { el.classList.add("in"); });
+  renderCalmBtn(); startTyping();
+});
+
+/* ---------- skin 3D (czysty CSS, tekstura skina) ---------- */
+(function () {
+  var host = $("skin3d"); if (!host) return;
+  var NICK = "MrDefeat_", U = 5.5;
+  var urls = ["https://mc-heads.net/skin/" + NICK, "https://minotar.net/skin/" + NICK];
+  function build(url, texH) {
+    var sk = document.createElement("div"); sk.className = "sk";
+    var modern = texH >= 64;
+    function box(w, h, d, u, v, cx, cy, over) {
+      var g = over ? 0.8 : 0, W = (w + g) * U, H = (h + g) * U, D = (d + g) * U;
+      var part = document.createElement("div"); part.className = "part";
+      part.style.transform = "translate3d(" + cx * U + "px," + (cy - 16) * U + "px,0)";
+      function face(fw, fh, tx, ty, tw, th, tf) {
+        var f = document.createElement("div"); f.className = "face";
+        f.style.width = tw * U + "px"; f.style.height = th * U + "px";
+        f.style.width = fw + "px"; f.style.height = fh + "px";
+        f.style.marginLeft = -fw / 2 + "px"; f.style.marginTop = -fh / 2 + "px";
+        f.style.backgroundImage = 'url("' + url + '")';
+        f.style.backgroundSize = 64 * U * (fw / (tw * U)) + "px " + texH * U * (fh / (th * U)) + "px";
+        f.style.backgroundPosition = -tx * U * (fw / (tw * U)) + "px " + -ty * U * (fh / (th * U)) + "px";
+        f.style.transform = tf; part.appendChild(f);
+      }
+      face(W, H, u + d, v + d, w, h, "translateZ(" + D / 2 + "px)");                         // przód
+      face(W, H, u + 2 * d + w, v + d, w, h, "rotateY(180deg) translateZ(" + D / 2 + "px)");   // tył
+      face(D, H, u, v + d, d, h, "rotateY(-90deg) translateZ(" + W / 2 + "px)");              // prawa strona postaci
+      face(D, H, u + d + w, v + d, d, h, "rotateY(90deg) translateZ(" + W / 2 + "px)");       // lewa strona postaci
+      face(W, D, u + d, v, w, d, "rotateX(90deg) translateZ(" + H / 2 + "px)");               // góra
+      face(W, D, u + d + w, v, w, d, "rotateX(-90deg) translateZ(" + H / 2 + "px)");          // dół
+      sk.appendChild(part);
+    }
+    // [w,h,d, u,v, x,y, uOver,vOver]
+    var parts = [
+      [8, 8, 8, 0, 0, 0, 4, 32, 0],
+      [8, 12, 4, 16, 16, 0, 14, 16, 32],
+      [4, 12, 4, 40, 16, -6, 14, 40, 32],
+      [4, 12, 4, modern ? 32 : 40, modern ? 48 : 16, 6, 14, 48, 48],
+      [4, 12, 4, 0, 16, -2, 26, 0, 32],
+      [4, 12, 4, modern ? 16 : 0, modern ? 48 : 16, 2, 26, 0, 48]
+    ];
+    parts.forEach(function (p, idx) {
+      box(p[0], p[1], p[2], p[3], p[4], p[5], p[6], false);
+      if (modern || idx === 0) box(p[0], p[1], p[2], p[7], p[8], p[5], p[6], true);
+    });
+    return sk;
+  }
+  function start(url, texH) {
+    var sk = build(url, texH); host.appendChild(sk); host.hidden = false;
+    var ry = 28, dragging = false, lastX = 0, last = 0;
+    function paint() { sk.style.transform = "rotateX(-10deg) rotateY(" + ry + "deg)"; }
+    paint();
+    host.addEventListener("pointerdown", function (e) { dragging = true; lastX = e.clientX; try { host.setPointerCapture(e.pointerId); } catch (er) {} });
+    host.addEventListener("pointermove", function (e) { if (!dragging) return; ry += (e.clientX - lastX) * 0.8; lastX = e.clientX; paint(); });
+    ["pointerup", "pointercancel"].forEach(function (n) { host.addEventListener(n, function () { dragging = false; }); });
+    (function loop(ts) {
+      if (!reduceMotion && !dragging && last) { ry += (ts - last) * 0.03; paint(); }
+      last = ts; requestAnimationFrame(loop);
+    })(0);
+  }
+  (function tryLoad(i) {
+    if (i >= urls.length) return;
+    var im = new Image();
+    im.onload = function () { if (im.naturalWidth === 64 && (im.naturalHeight === 64 || im.naturalHeight === 32)) start(urls[i], im.naturalHeight); else tryLoad(i + 1); };
+    im.onerror = function () { tryLoad(i + 1); };
+    im.src = urls[i];
+  })(0);
+})();
+
+/* ---------- zagraj ze mną (kopiowanie adresu serwera) ---------- */
+(function () {
+  if (!SERVER_ADDRESS) return;
+  $("joinrow").hidden = false; $("join-addr").textContent = SERVER_ADDRESS;
+  $("join-copy").addEventListener("click", function () {
+    track("copy-server-ip");
+    var done = function () { $("join-copied").textContent = T[lang].srv_copied; setTimeout(function () { $("join-copied").textContent = ""; }, 2200); };
+    try { navigator.clipboard.writeText(SERVER_ADDRESS).then(done, done); } catch (e) { done(); }
+  });
+})();
+
+/* ---------- prywatne statystyki (Umami, bez ciasteczek; widoczne tylko w Twoim panelu) ---------- */
+function track(name) { try { if (window.umami && window.umami.track) window.umami.track(name); } catch (e) {} }
+if (UMAMI_ID) {
+  var um = document.createElement("script");
+  um.defer = true; um.src = "https://cloud.umami.is/script.js";
+  um.setAttribute("data-website-id", UMAMI_ID); um.setAttribute("data-do-not-track", "true");
+  document.head.appendChild(um);
+}
+
+/* ---------- start ---------- */
+var saved = storeGet();
+var initial = location.hash === "#ja" ? "ja" : (saved === "pl" || saved === "en" ? saved : "en");
+applyLang(initial);
+loadPresence();
+setInterval(loadPresence, 30000);
+</script>
+</body>
+</html>
